@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "title": "XSS in Carbon Footprint Calculator",
+    "description": "Find and exploit an XSS vulnerability in a mock carbon footprint calculator to steal user data.",
+    "category": "Web Exploitation",
+    "points": 100,
+    "flag": "TAZ{xss_carbon_calc_pwned}"
+  },
+  {
+    "id": 2,
+    "title": "SQLi in Carbon-Credit Portal",
+    "description": "Exploit a SQL Injection vulnerability in a mock carbon-credit trading portal to access the database.",
+    "category": "Web Exploitation",
+    "points": 150,
+    "flag": "TAZ{sqli_eco_credits_leaked}"
+  },
+  {
+    "id": 3,
+    "title": "Bypass Solar Panel Dashboard Login",
+    "description": "Find a way to bypass the login mechanism of a Solar Panel Monitoring Dashboard.",
+    "category": "Web Exploitation",
+    "points": 120,
+    "flag": "TAZ{solar_dashboard_access}"
+  },
+  {
+    "id": 4,
+    "title": "Crack Energy-Efficient Cipher",
+    "description": "Analyze and crack a custom 'energy-efficient cipher' with weak key rounds.",
+    "category": "Cryptography",
+    "points": 180,
+    "flag": "TAZ{eco_cipher_broken}"
+  },
+  {
+    "id": 5,
+    "title": "Break PoS Microgrid Ledger",
+    "description": "Identify and exploit vulnerabilities in a blockchain-style Proof-of-Stake microgrid ledger.",
+    "category": "Cryptography",
+    "points": 200,
+    "flag": "TAZ{microgrid_ledger_compromised}"
+  },
+  {
+    "id": 6,
+    "title": "Spot Illegal Logging Satellite Image",
+    "description": "Examine satellite images for signs of manipulation and identify illegal logging activities.",
+    "category": "Forensics",
+    "points": 170,
+    "flag": "TAZ{illegal_logging_found}"
+  },
+  {
+    "id": 7,
+    "title": "Extract EXIF GPS from Rainforest Photos",
+    "description": "Extract hidden EXIF GPS data from rainforest conservation photos to pinpoint a location.",
+    "category": "Forensics",
+    "points": 140,
+    "flag": "TAZ{rainforest_gps_revealed}"
+  },
+  {
+    "id": 8,
+    "title": "Reverse Garbage Truck Routes Binary",
+    "description": "Reverse engineer a stripped binary simulating garbage truck routes to find a hidden optimization.",
+    "category": "Reverse Engineering",
+    "points": 220,
+    "flag": "TAZ{garbage_route_optimized}"
+  },
+  {
+    "id": 9,
+    "title": "Crack EV Charging Schedule Program",
+    "description": "Analyze and crack an obfuscated program for EV charging schedules to manipulate charging times.",
+    "category": "Reverse Engineering",
+    "points": 250,
+    "flag": "TAZ{ev_schedule_cracked}"
+  },
+  {
+    "id": 10,
+    "title": "Buffer Overflow in Smart Irrigation",
+    "description": "Find and exploit a buffer overflow vulnerability in a Smart Irrigation Controller.",
+    "category": "Pwn / Exploitation",
+    "points": 300,
+    "flag": "TAZ{irrigation_overflow_pwned}"
+  },
+  {
+    "id": 11,
+    "title": "Track Fake Eco-Fund",
+    "description": "Use OSINT techniques to track down a fake eco-fund using WHOIS and DNS footprints.",
+    "category": "OSINT / Misc",
+    "points": 190,
+    "flag": "TAZ{fake_eco_fund_exposed}"
+  }
+]
+

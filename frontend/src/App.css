@@ -1,0 +1,424 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  
+  /* Green Eco Theme Colors */
+  --background: #0a1a0a;
+  --foreground: #e8f5e8;
+  --card: #0f2f0f;
+  --card-foreground: #e8f5e8;
+  --popover: #0f2f0f;
+  --popover-foreground: #e8f5e8;
+  --primary: #00ff88;
+  --primary-foreground: #0a1a0a;
+  --secondary: #1a4a1a;
+  --secondary-foreground: #e8f5e8;
+  --muted: #1a4a1a;
+  --muted-foreground: #a8d5a8;
+  --accent: #00ff88;
+  --accent-foreground: #0a1a0a;
+  --destructive: #ff4444;
+  --border: #2a5a2a;
+  --input: #1a4a1a;
+  --ring: #00ff88;
+  
+  /* Chart colors with green theme */
+  --chart-1: #00ff88;
+  --chart-2: #44ff99;
+  --chart-3: #66ffaa;
+  --chart-4: #88ffbb;
+  --chart-5: #aaffcc;
+  
+  /* Sidebar colors */
+  --sidebar: #0f2f0f;
+  --sidebar-foreground: #e8f5e8;
+  --sidebar-primary: #00ff88;
+  --sidebar-primary-foreground: #0a1a0a;
+  --sidebar-accent: #1a4a1a;
+  --sidebar-accent-foreground: #e8f5e8;
+  --sidebar-border: #2a5a2a;
+  --sidebar-ring: #00ff88;
+}
+
+.dark {
+  /* Dark mode uses the same green eco theme */
+  --background: #0a1a0a;
+  --foreground: #e8f5e8;
+  --card: #0f2f0f;
+  --card-foreground: #e8f5e8;
+  --popover: #0f2f0f;
+  --popover-foreground: #e8f5e8;
+  --primary: #00ff88;
+  --primary-foreground: #0a1a0a;
+  --secondary: #1a4a1a;
+  --secondary-foreground: #e8f5e8;
+  --muted: #1a4a1a;
+  --muted-foreground: #a8d5a8;
+  --accent: #00ff88;
+  --accent-foreground: #0a1a0a;
+  --destructive: #ff4444;
+  --border: #2a5a2a;
+  --input: #1a4a1a;
+  --ring: #00ff88;
+  --chart-1: #00ff88;
+  --chart-2: #44ff99;
+  --chart-3: #66ffaa;
+  --chart-4: #88ffbb;
+  --chart-5: #aaffcc;
+  --sidebar: #0f2f0f;
+  --sidebar-foreground: #e8f5e8;
+  --sidebar-primary: #00ff88;
+  --sidebar-primary-foreground: #0a1a0a;
+  --sidebar-accent: #1a4a1a;
+  --sidebar-accent-foreground: #e8f5e8;
+  --sidebar-border: #2a5a2a;
+  --sidebar-ring: #00ff88;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+/* Custom Green Eco Theme Styles */
+.eco-gradient {
+  background: linear-gradient(135deg, #0a1a0a 0%, #1a4a1a 50%, #0a1a0a 100%);
+}
+
+.eco-gradient-radial {
+  background: radial-gradient(circle at center, #1a4a1a 0%, #0a1a0a 70%);
+}
+
+.eco-glow {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.eco-glow-strong {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+.eco-text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.eco-border-glow {
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.eco-hover-glow:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Matrix Rain Animation */
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #00ff88;
+  animation: matrix-fall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Leaf Progress Bar */
+.leaf-progress {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: rgba(26, 74, 26, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.leaf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff88, #44ff99);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.leaf-progress-fill::after {
+  content: '🍃';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  animation: leaf-bounce 2s ease-in-out infinite;
+}
+
+@keyframes leaf-bounce {
+  0%, 100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-60%) scale(1.1); }
+}
+
+/* Floating Particles */
+.floating-particle {
+  position: absolute;
+  pointer-events: none;
+  animation: float-up 6s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Eco Counter Animations */
+.eco-counter {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.eco-counter-increment {
+  animation: counter-pulse 0.5s ease-out;
+}
+
+@keyframes counter-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color: #44ff99; }
+  100% { transform: scale(1); }
+}
+
+/* Badge Styles */
+.badge-crown {
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: #1a1a1a;
+  text-shadow: none;
+}
+
+.badge-trophy {
+  background: linear-gradient(45deg, #c0c0c0, #e5e5e5);
+  color: #1a1a1a;
+  text-shadow: none;
+}
+
+.badge-medal {
+  background: linear-gradient(45deg, #cd7f32, #daa520);
+  color: #1a1a1a;
+  text-shadow: none;
+}
+
+/* Challenge Card Styles */
+.challenge-card {
+  background: rgba(15, 47, 15, 0.8);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.challenge-card:hover {
+  border-color: rgba(0, 255, 136, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 255, 136, 0.2);
+  transform: translateY(-4px);
+}
+
+.challenge-solved {
+  border-color: rgba(0, 255, 136, 0.8);
+  background: rgba(0, 255, 136, 0.1);
+}
+
+/* Category Icons */
+.category-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.5));
+}
+
+/* Scoreboard Styles */
+.scoreboard-row {
+  background: rgba(15, 47, 15, 0.6);
+  border: 1px solid rgba(42, 90, 42, 0.5);
+  transition: all 0.3s ease;
+}
+
+.scoreboard-row:hover {
+  background: rgba(26, 74, 26, 0.8);
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+.rank-1 {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 237, 78, 0.1));
+  border-color: #ffd700;
+}
+
+.rank-2 {
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.2), rgba(229, 229, 229, 0.1));
+  border-color: #c0c0c0;
+}
+
+.rank-3 {
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.2), rgba(218, 165, 32, 0.1));
+  border-color: #cd7f32;
+}
+
+/* Form Styles */
+.eco-input {
+  background: rgba(26, 74, 26, 0.5);
+  border: 1px solid rgba(42, 90, 42, 0.5);
+  color: #e8f5e8;
+  transition: all 0.3s ease;
+}
+
+.eco-input:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2);
+  background: rgba(26, 74, 26, 0.8);
+}
+
+.eco-button {
+  background: linear-gradient(135deg, #00ff88, #44ff99);
+  color: #0a1a0a;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.eco-button:hover {
+  background: linear-gradient(135deg, #44ff99, #66ffaa);
+  box-shadow: 0 4px 16px rgba(0, 255, 136, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Navigation Styles */
+.nav-link {
+  color: #a8d5a8;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+.nav-link.active {
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #00ff88;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+/* Loading Spinner */
+.eco-spinner {
+  border: 3px solid rgba(0, 255, 136, 0.3);
+  border-top: 3px solid #00ff88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .matrix-column {
+    font-size: 12px;
+  }
+  
+  .category-icon {
+    font-size: 1.5rem;
+  }
+  
+  .eco-counter {
+    font-size: 0.9rem;
+  }
+}
